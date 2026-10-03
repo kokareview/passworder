@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка пароля</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="card">
+      <h1>Проверка пароля</h1>
+        <div class="input-wrap">
+          <input type="password" id="password" placeholder="Введите пароль" autocomplete="off">
+          <button id="toggle" type="button" title="Показать пароль">
+          <svg id="eyeIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </button>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" id="bar"></div>
+      </div>
+      <div class="level" id="level"></div>
+      <ul class="checks">
+        <li id="chk-len"><span class="mark">✗</span> Минимум 8 символов</li>
+        <li id="chk-lower"><span class="mark">✗</span> Строчные буквы</li>
+        <li id="chk-upper"><span class="mark">✗</span> Заглавные буквы</li>
+        <li id="chk-digit"><span class="mark">✗</span> Цифры</li>
+        <li id="chk-special"><span class="mark">✗</span> Спецсимволы</li>
+        <li id="chk-long"><span class="mark">✗</span> 12+ символов</li>
+      </ul>
+      <div class="score">
+        <span>Надёжность</span>
+        <span><b id="score-value">0</b> / 100</span>
+      </div>
+      <div class="crack" id="crack"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
